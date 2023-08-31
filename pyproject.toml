@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "customdownloader"
+version = "0.1.0"
+description = "A simple Download manager with webscraping features"
+authors = ["Angel Fuenmayor <32184965+4ngelf@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+pyside6 = "^6.5.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-qt = "^4.2.0"
+flake8 = "^6.1.0"
+black = "^23.7.0"
+isort = "^5.12.0"
+pre-commit = "^3.3.3"

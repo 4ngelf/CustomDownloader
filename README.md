@@ -1,29 +1,25 @@
-# github-project
+# Custom Downloader
 
-Template for new projects, with default devcontainer config and README
+A simple Download manager with webscraping features.
 
-[📓 Visit this site for more details making a readme](https://www.makeareadme.com/)
-> Use this space for a short description.
+## Current custom downloaders
 
-> <Consider using an image here if you feel creative!>
-
-> Use this space to appeal for why this program is so great
-> Showing off features and the like.
+- jkanime.net episodes
 
 ## Setup <a name = "getting_started"></a>
 
-> Space for showing installation steps and testing enviroment
-
 ### Prerequisites
+
+<small>TODO</small>
 
 ### Installation
 
+<small>TODO</small>
+
 ## Usage <a name = "usage"></a>
 
-> Here show some code/screenshot examples on how to use the app/cli/lib in more detail.
+<small>TODO</small>
 
 ## License
 
-> Replace for license actual name
- 
-[License](./LICENSE).
+[MIT License](./LICENSE).
