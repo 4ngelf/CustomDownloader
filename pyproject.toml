@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "A simple Download manager with webscraping features"
 authors = ["Angel Fuenmayor <32184965+4ngelf@users.noreply.github.com>"]
 readme = "README.md"
+license = "MIT"
 packages = [{ include="downloader", from="src"}]
 
 [tool.poetry.dependencies]
