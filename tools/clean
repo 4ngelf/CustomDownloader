@@ -1,0 +1,12 @@
+#!/bin/bash
+
+TOOLS_DIR=$(dirname "$(realpath "$0")")
+
+# Source config
+. "$TOOLS_DIR/config.sh"
+
+clean(){
+    rm -rf "$1"
+}
+
+clean "$PYTHON_UI_DIR"
