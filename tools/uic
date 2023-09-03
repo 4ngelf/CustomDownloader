@@ -16,3 +16,5 @@ for ui_in in "$UI_DIR"/*; do
     ui_out="${PYTHON_UI_DIR}/$(basename "$ui_in" | tr '.' '_').py"
     pyside6-uic "$ui_in" > "$ui_out"
 done
+
+echo "All set!"
