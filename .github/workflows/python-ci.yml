@@ -32,7 +32,7 @@ jobs:
         python3 -m venv $POETRY_HOME
         $POETRY_HOME/bin/pip install --upgrade pip
         $POETRY_HOME/bin/pip install poetry=="$POETRY_VERSION"
-        PATH="$POETRY_HOME/bin:$PATH"
+        export PATH="$POETRY_HOME/bin:$PATH"
     - name: Check pyproject.toml
       run: poetry check
     - name: Install dependencies
