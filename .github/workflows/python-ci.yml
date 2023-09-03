@@ -29,7 +29,10 @@ jobs:
         POETRY_HOME: /opt/poetry
         POETRY_VERSION: ${{ vars.PYTHON_POETRY_VERSION }}
       run: |
-        curl -sSL https://install.python-poetry.org | python3 - --version "$POETRY_VERSION"
+        python3 -m venv $POETRY_HOME
+        $POETRY_HOME/bin/pip install --upgrade pip
+        $POETRY_HOME/bin/pip install poetry=="$POETRY_VERSION"
+        echo "$POETRY_HOME/bin" >> $GITHUB_PATH
     - name: Check pyproject.toml
       run: poetry check
     - name: Install dependencies
