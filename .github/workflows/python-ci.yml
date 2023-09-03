@@ -33,6 +33,8 @@ jobs:
         $POETRY_HOME/bin/pip install --upgrade pip
         $POETRY_HOME/bin/pip install poetry=="$POETRY_VERSION"
         ln -s $POETRY_HOME/bin/poetry /bin/poetry
+    - name: Check pyproject.toml
+      run: poetry check
     - name: Install dependencies
       run: poetry install
     - name: Lint with flake8
