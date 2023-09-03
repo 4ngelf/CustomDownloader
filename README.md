@@ -1,3 +1,5 @@
+[![Python CI](https://github.com/4ngelf/CustomDownloader/actions/workflows/python-ci.yml/badge.svg)](https://github.com/4ngelf/CustomDownloader/actions/workflows/python-ci.yml)
+
 # Custom Downloader
 
 A simple Download manager with webscraping features.
