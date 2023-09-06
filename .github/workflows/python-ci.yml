@@ -41,7 +41,7 @@ jobs:
       run: poetry install
     - name: Prepare application
       run: |
-        poetry run ./tools/uic
+        poetry run invoke prepare
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
