@@ -3,8 +3,8 @@ name = "customdownloader"
 version = "0.1.0"
 description = "A simple Download manager with webscraping features"
 authors = ["Angel Fuenmayor <32184965+4ngelf@users.noreply.github.com>"]
-readme = "README.md"
 license = "MIT"
+readme = "README.md"
 packages = [{ include="downloader", from="src"}]
 
 [tool.poetry.dependencies]
@@ -19,9 +19,10 @@ black = "^23.7.0"
 isort = "^5.12.0"
 pre-commit = "^3.3.3"
 python-semantic-release = "^8.0.8"
+invoke = "^2.2.0"
 
 [tool.poetry.scripts]
-app-start = "downloader:startapp"
+custom-downloader = "downloader:startapp"
 
 [tool.semantic_release]
 version_variables = ["src/downloader/__init__.py:__version__"]
