@@ -51,11 +51,10 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         poetry run flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
-      run: |
-        poetry run pytest
+      run: poetry run pytest
     # TODO: Put here build workflow
     
     - name: Create release if needed
-      run: semantic-release version --changelog --commit --push --vcs-release
+      run: poetry run semantic-release version --changelog --commit --push --vcs-release
       env:
         GH_TOKEN: ${{ github.token }}
