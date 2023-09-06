@@ -13,9 +13,7 @@ jobs:
   integration:
     environment: CI
     runs-on: ubuntu-latest
-    permissions: 
-      id-token: write
-      contents: write
+    permissions: write-all
     strategy:
       fail-fast: false
       matrix:
@@ -55,6 +53,6 @@ jobs:
     # TODO: Put here build workflow
     
     - name: Create release if needed
-      uses: python-semantic-release/python-semantic-release@v8.0.8
-      with:
-        github_token: ${{ github.token }}
+      run: poetry run semantic-release version
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
