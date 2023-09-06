@@ -53,6 +53,6 @@ jobs:
     # TODO: Put here build workflow
     
     - name: Create release if needed
-      run: poetry run semantic-release version
+      run: poetry run semantic-release version --print
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
