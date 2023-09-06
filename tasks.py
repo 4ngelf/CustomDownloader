@@ -19,17 +19,26 @@ def uic(c: Context):
         output_f = PYTHON_UI_DIR / f"{input_f.stem}_ui.py"
         c.run(f"pyside6-uic -o {output_f} {input_f}")
 
-    print("🙆 All UIs compiled!")
+    print("🧪 All UIs compiled!")
 
 
-@task
-def clean(c: Context):
+@task(help={"cache": "Also cleans this project cache"})
+def clean(c: Context, cache: bool = False):
     """Cleans up this project generated files"""
     patterns = [
         PYTHON_UI_DIR,
     ]
 
+    if cache:
+        patterns.append(BASE_DIR / "**/__pycache__")
+        patterns.append(BASE_DIR / ".pytest_cache")
+
     for pattern in patterns:
         c.run(f"rm -rf {pattern}")
+    print("🧹 Clean up complete!")
 
-    print("🙆 Clean up complete!")
+
+@task(clean, uic)
+def prepare(c: Context):
+    """Prepare the project for distribution"""
+    print("🙆 All preparations completed!")
