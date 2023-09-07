@@ -1,12 +1,14 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
+default_install_hook_types: [pre-commit, post-commit]
+default_stages: [pre-commit]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
     hooks:
-    -   id: trailing-whitespace
-    -   id: end-of-file-fixer
-    -   id: check-yaml
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
   - repo: https://github.com/python-poetry/poetry
     rev: 1.5.1
     hooks:
@@ -15,7 +17,7 @@ repos:
     rev: 6.1.0
     hooks:
       - id: flake8
-        args: [ "--select=E9,F63,F7,F82" ]
+        args: ["--select=E9,F63,F7,F82"]
   - repo: https://github.com/PyCQA/isort
     rev: 5.12.0
     hooks:
@@ -34,3 +36,11 @@ repos:
         language: system
         pass_filenames: false
         always_run: true
+      - id: semantic-release
+        name: semantic-release
+        description: Create a tag based on git history
+        entry: semantic-release version --changelog --commit --push --no-vcs-release
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [post-commit]

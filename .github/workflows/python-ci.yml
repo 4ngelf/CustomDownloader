@@ -34,10 +34,10 @@ jobs:
         POETRY_HOME: /opt/poetry
         POETRY_VERSION: ${{ vars.PYTHON_POETRY_VERSION }}
       run: |
-        python3 -m venv $POETRY_HOME
-        $POETRY_HOME/bin/pip install --upgrade pip
-        $POETRY_HOME/bin/pip install poetry=="$POETRY_VERSION"
-        echo "$POETRY_HOME/bin" >> $GITHUB_PATH
+        python3 -m venv "$POETRY_HOME"
+        "$POETRY_HOME/bin/pip" install --upgrade pip
+        "$POETRY_HOME/bin/pip" install poetry=="$POETRY_VERSION"
+        echo "$POETRY_HOME/bin" >> "$GITHUB_PATH"
     - name: Check pyproject.toml
       run: poetry check
     - name: Install dependencies
@@ -53,8 +53,18 @@ jobs:
     - name: Test with pytest
       run: poetry run pytest
     # TODO: Put here build workflow
-    
+
     - name: Create release if needed
-      run: poetry run semantic-release version --print
+      run: |
+        LAST_TAG=$(git describe --tags --abbrev=0)
+        response=$(curl -s -o /dev/null -w "%{http_code}" \
+           "${API_URL}/repos/${REPOSITORY}/releases/${LAST_TAG}")
+
+        if [[ "$response" == "200" ]]; then
+          echo "Release for tag ${LAST_TAG} already exists"
+        else
+          gh release create "$LAST_TAG" --latest --generate-notes
+        fi
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        API_URL: ${{ github.api_url }}
+        REPOSITORY: ${{ github.repository }}
