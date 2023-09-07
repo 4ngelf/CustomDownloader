@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "customdownloader"
-version = "0.1.0"
+version = "0.1.1"
 description = "A simple Download manager with webscraping features"
 authors = ["Angel Fuenmayor <32184965+4ngelf@users.noreply.github.com>"]
 license = "MIT"

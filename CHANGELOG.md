@@ -2,6 +2,51 @@
 
 
 
+## v0.1.1 (2023-09-06)
+
+### Chore
+
+* chore: Update semantic-release settings ([`b6ae9de`](https://github.com/4ngelf/CustomDownloader/commit/b6ae9de6b899b71b2c7c0daf1d0cba03e0a28c70))
+
+### Ci
+
+* ci: fix CI workflow ([`c0a16ff`](https://github.com/4ngelf/CustomDownloader/commit/c0a16ffeef126e7a3c62a98de71877daf25ad349))
+
+* ci: Update python-ci.yml ([`3189bd0`](https://github.com/4ngelf/CustomDownloader/commit/3189bd0c12c84c8b7b73ddbbdfffc91c275205ff))
+
+* ci: Update python-ci.yml ([`238a168`](https://github.com/4ngelf/CustomDownloader/commit/238a168c463a4ff93d3acce825872851ada177ca))
+
+* ci: Update python-ci.yml ([`4419774`](https://github.com/4ngelf/CustomDownloader/commit/4419774fd093f308dbc500e62ca5db3144bdcef5))
+
+* ci: Update python-ci.yml ([`c9a550b`](https://github.com/4ngelf/CustomDownloader/commit/c9a550b7b404210554ddb8aad91b49e4b7bfd3e5))
+
+* ci: fix python-ci.yml ([`db06b37`](https://github.com/4ngelf/CustomDownloader/commit/db06b374e0c999c7b065e91dda6c45d48f194039))
+
+* ci: fix workflow ([`889bb94`](https://github.com/4ngelf/CustomDownloader/commit/889bb94a912c04e6141c3e693f2724fc11dc766e))
+
+* ci: Update permmisions ([`90e30ba`](https://github.com/4ngelf/CustomDownloader/commit/90e30bae691cb2323b054e881dbc2add46d08d26))
+
+* ci: Add `semantic-release` workflow ([`64a4936`](https://github.com/4ngelf/CustomDownloader/commit/64a49368da72438ab653fe19b717ea930d122b38))
+
+* ci: Update python-ci.yml ([`7dbf6a7`](https://github.com/4ngelf/CustomDownloader/commit/7dbf6a7797b3c8eb2c4f4a4a5b1fca417196788e))
+
+### Fix
+
+* fix: Make releases to operate only once ([`616bbe2`](https://github.com/4ngelf/CustomDownloader/commit/616bbe230d271eb1ce4143bbcf3682d203120a61))
+
+### Style
+
+* style: Change emojis to task tool outputs ([`43cdeb2`](https://github.com/4ngelf/CustomDownloader/commit/43cdeb2758b5bc76c37c2e9809a795b72646a82f))
+
+### Unknown
+
+* Update python-ci.yml ([`58666fc`](https://github.com/4ngelf/CustomDownloader/commit/58666fcbb86adc457d4cd9350f275da7ce9536e5))
+
+* ci:Add semantic release workflow ([`f9a99ee`](https://github.com/4ngelf/CustomDownloader/commit/f9a99eed1ed296bccec00564f8171efe6d7b72d8))
+
+* Update python-ci.yml ([`d153d5c`](https://github.com/4ngelf/CustomDownloader/commit/d153d5cd730bd679dcf2ade43276fca8095d8831))
+
+
 ## v0.1.0 (2023-09-06)
 
 ### Build
