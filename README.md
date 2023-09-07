@@ -47,7 +47,9 @@ poetry run custom-downloader
 ## License
 
 [MIT License](./LICENSE)
-[Python-install](https://www.python.org/downloads/)
-[poetry-install](https://python-poetry.org/docs/#installation)
-[pyenv-install](https://github.com/pyenv/pyenv#installation)
-[pipx-install](https://pypa.github.io/pipx/installation/)
+
+<!-- Links -->
+[Python-install]: https://www.python.org/downloads/
+[poetry-install]: https://python-poetry.org/docs/#installation
+[pyenv-install]: https://github.com/pyenv/pyenv#installation
+[pipx-install]: https://pypa.github.io/pipx/installation/
