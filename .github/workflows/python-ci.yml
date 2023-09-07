@@ -66,7 +66,7 @@ jobs:
         LAST_TAG=$(git for-each-ref --sort=-creatordate --format="%(refname:short)" "refs/tags" | head -n 1 -)
         echo "Got tag: $LAST_TAG"
 
-        endpoint="${API_URL}/repos/${REPOSITORY}/releases/${LAST_TAG}"
+        endpoint="${API_URL}/repos/${REPOSITORY}/releases/tags/${LAST_TAG}"
         echo "Checking: $endpoint"
         response=$(curl -s -o /dev/null -w "%{http_code}" "$endpoint")
 
