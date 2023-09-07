@@ -13,7 +13,8 @@ jobs:
   integration:
     environment: CI
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions: 
+      contents: write
     strategy:
       fail-fast: false
       matrix:
@@ -56,6 +57,7 @@ jobs:
 
     - name: Create release if needed
       run: |
+        git fetch --tags
         LAST_TAG=$(git describe --tags --abbrev=0)
         response=$(curl -s -o /dev/null -w "%{http_code}" \
            "${API_URL}/repos/${REPOSITORY}/releases/${LAST_TAG}")
