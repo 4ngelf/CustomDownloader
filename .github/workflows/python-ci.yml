@@ -20,8 +20,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      with:
-        fetch-tags: true
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
@@ -56,11 +54,12 @@ jobs:
   release:
     runs-on: ubuntu-latest
     needs: integration
-    permissions: 
+    permissions:
       contents: write
     steps:
     # TODO: Get previous job outputs here
-    
+
+    - uses: actions/checkout@v3
     - name: Create release if needed
       run: |
         git fetch --tags
