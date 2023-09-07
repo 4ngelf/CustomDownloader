@@ -68,5 +68,6 @@ jobs:
           gh release create "$LAST_TAG" --latest --generate-notes
         fi
       env:
+        GH_TOKEN: ${{ github.token }}
         API_URL: ${{ github.api_url }}
         REPOSITORY: ${{ github.repository }}
