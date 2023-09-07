@@ -58,7 +58,7 @@ jobs:
     - name: Create release if needed
       run: |
         git fetch --tags
-        LAST_TAG=$(git describe --tags --abbrev=0)
+        LAST_TAG=$(git for-each-ref --sort=-creatordate --format="%(refname:short)" "refs/tags" | head -n 1 -)
         response=$(curl -s -o /dev/null -w "%{http_code}" \
            "${API_URL}/repos/${REPOSITORY}/releases/${LAST_TAG}")
 
